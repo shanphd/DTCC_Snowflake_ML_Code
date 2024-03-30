@@ -12,14 +12,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+      
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '20' # specify the Node.js version you want to use
       
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2
       with:
         python-version: '3.x' # specify the Python version you want to use
       
@@ -30,4 +30,3 @@ jobs:
         
     - name: Run tests
       run: python -m unittest discover
-
